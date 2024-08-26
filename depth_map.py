@@ -108,6 +108,10 @@ sfm_path = Path("./logitech/sfm") # Path("example/sfm") # Path("custom_frames/sf
 point_cloud_file = Path(sfm_path / "0/rec.ply")
 pcd = o3d.io.read_point_cloud(str(point_cloud_file))
 
+# translate and scale the point cloud if needed
+# pcd.translate([0,0,0], True)
+# pcd.scale(2500, np.array(pcd.get_center()))
+
 # Define the desired resolution of the output image
 width, height = 640, 480 
 
